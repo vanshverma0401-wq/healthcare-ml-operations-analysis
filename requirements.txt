@@ -1,0 +1,8 @@
+# Libraries imported by retained historical source; not a replay-verified lock.
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+xgboost
+ipython

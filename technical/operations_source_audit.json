@@ -1,0 +1,220 @@
+{
+  "review_date": "2026-11-08",
+  "scope": "Collaborative synthetic-data academic healthcare operations workstream; no model execution or real clinical deployment claimed.",
+  "source_scripts": [
+    {
+      "public_path": "src/operations/baseline.py",
+      "source_sha256": "69d5f4129d8a68c9691ade9cd672dda4bef694766be26db823ff6e068c8e014f",
+      "source_type": "Original baseline Python export"
+    },
+    {
+      "public_path": "src/operations/refined.py",
+      "source_sha256": "b049bf604d574cba150bfebfaeba51f3c256918e2ec603abb0ae5b2e80c61588",
+      "source_type": "Original refined Python export"
+    }
+  ],
+  "source_privacy_review": {
+    "python_source_confidentiality_markings_found": false,
+    "private_input_path_requires_replacement": true,
+    "record_previews_not_rehosted": true,
+    "documents_with_confidentiality_markings_excluded": true,
+    "original_presentations_and_user_manual_not_rehosted": true
+  },
+  "data_context": {
+    "raw_rows_retained": 55500,
+    "deduplication_applied_in_operations_branch": false,
+    "synthetic_operational_coalitions": 4,
+    "coalition_day_rows": 7418,
+    "coalition_day_date_start": "2019-05-08",
+    "coalition_day_date_end": "2024-06-05",
+    "observed_staffing_or_real_bed_capacity_supplied": false
+  },
+  "baseline": {
+    "task": "Three-class low/normal/high room-utilization state at future horizons",
+    "models_in_source": [
+      "LogisticRegression",
+      "RBF SVC"
+    ],
+    "target_definition": "Per-synthetic-system utilization below full-series Q25, above full-series Q75, otherwise normal.",
+    "split_in_actual_code": "Random stratified 80/20 row split; the time-safe source comment is inaccurate.",
+    "other_limits": [
+      "Rooms use system plus room number rather than hospital-qualified room IDs.",
+      "Longer-horizon summary plots use manually entered historical metric arrays."
+    ]
+  },
+  "refined": {
+    "task": "Predict future artificial-coalition high-utilization proxy labels at 1 through 7 days ahead.",
+    "models_in_source": [
+      "HistGradientBoostingClassifier",
+      "RBF SVC"
+    ],
+    "capacity_proxy": "ceil(full-series 95th percentile of occupied rooms / 0.85), with minimum 20; not an observed staffing measurement.",
+    "high_label_definition": "Utilization ratio greater than or equal to 0.85 (code uses >=).",
+    "estimated_capacities_by_artificial_coalition": [
+      145,
+      148,
+      143,
+      146
+    ],
+    "split_in_source": "Earliest 70%, validation next 10%, latest 20% within each coalition.",
+    "one_day_split_saved_counts": {
+      "train_rows": 5188,
+      "validation_rows": 742,
+      "test_rows": 1484,
+      "train_positive_rows": 312,
+      "validation_positive_rows": 9,
+      "test_positive_rows": 29
+    },
+    "review_rule": "Maximum of GBM and SVM positive-class probability crosses the per-horizon threshold.",
+    "final_saved_locked_policy_metrics": [
+      {
+        "horizon_days": 1,
+        "threshold": 0.04,
+        "TP": 28,
+        "FP": 204,
+        "FN": 1,
+        "TN": 1251,
+        "recall": 0.965517,
+        "precision": 0.12069,
+        "flag_rate": 0.156334,
+        "auc_gbm": 0.975163,
+        "auc_svm": 0.972722,
+        "auc_review": 0.973812,
+        "test_rows": 1484,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 2,
+        "threshold": 0.03,
+        "TP": 27,
+        "FP": 248,
+        "FN": 2,
+        "TN": 1207,
+        "recall": 0.931034,
+        "precision": 0.098182,
+        "flag_rate": 0.18531,
+        "auc_gbm": 0.946534,
+        "auc_svm": 0.937054,
+        "auc_review": 0.936556,
+        "test_rows": 1484,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 3,
+        "threshold": 0.04,
+        "TP": 24,
+        "FP": 253,
+        "FN": 5,
+        "TN": 1201,
+        "recall": 0.827586,
+        "precision": 0.086643,
+        "flag_rate": 0.186784,
+        "auc_gbm": 0.917042,
+        "auc_svm": 0.914623,
+        "auc_review": 0.922758,
+        "test_rows": 1483,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 4,
+        "threshold": 0.05,
+        "TP": 20,
+        "FP": 257,
+        "FN": 9,
+        "TN": 1196,
+        "recall": 0.689655,
+        "precision": 0.072202,
+        "flag_rate": 0.18691,
+        "auc_gbm": 0.879393,
+        "auc_svm": 0.858129,
+        "auc_review": 0.855495,
+        "test_rows": 1482,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 5,
+        "threshold": 0.06,
+        "TP": 18,
+        "FP": 239,
+        "FN": 11,
+        "TN": 1213,
+        "recall": 0.62069,
+        "precision": 0.070039,
+        "flag_rate": 0.173531,
+        "auc_gbm": 0.845208,
+        "auc_svm": 0.856084,
+        "auc_review": 0.850028,
+        "test_rows": 1481,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 6,
+        "threshold": 0.06,
+        "TP": 17,
+        "FP": 254,
+        "FN": 12,
+        "TN": 1197,
+        "recall": 0.586207,
+        "precision": 0.062731,
+        "flag_rate": 0.183108,
+        "auc_gbm": 0.79712,
+        "auc_svm": 0.798593,
+        "auc_review": 0.812496,
+        "test_rows": 1480,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      },
+      {
+        "horizon_days": 7,
+        "threshold": 0.07,
+        "TP": 19,
+        "FP": 244,
+        "FN": 10,
+        "TN": 1207,
+        "recall": 0.655172,
+        "precision": 0.072243,
+        "flag_rate": 0.177703,
+        "auc_gbm": 0.779843,
+        "auc_svm": 0.763374,
+        "auc_review": 0.770907,
+        "test_rows": 1480,
+        "positive_test_rows": 29,
+        "auto_enabled": false
+      }
+    ],
+    "final_saved_auto_enabled_horizons": 0,
+    "runtime_completeness": "review_lock_by_horizon_df is referenced but never defined in the supplied refined script. Clean top-to-bottom replay is not established."
+  },
+  "critical_method_limits": [
+    "Synthetic records and artificially balanced hospital coalitions do not establish real hospital demand, capacity or staffing behavior.",
+    "Capacity calibration and coalition assignment use the complete time range before partitions, so held-out information influences the problem definition.",
+    "Some shifted rolling histories are computed on a plain Series after grouping for shift, which allows window carry-over across coalition boundaries.",
+    "No horizon-sized gap purges train/validation/test boundary rows whose shifted targets cross those boundaries.",
+    "The daily series is created from occupied-room rows without an explicit all-coalition/all-date reindex; row shifts should not be assumed to prove exact calendar-day horizons for every row.",
+    "Only 29 positive held-out rows per final horizon, low precision and sparse validation positives limit interpretation.",
+    "The supplied refined source depends on missing interactive threshold-lock state; saved outputs are historical evidence, not a newly reproduced evaluation.",
+    "Original actionability and safety wording is retained only in historical figure content; the portfolio does not validate those claims."
+  ],
+  "notebook_or_model_executed_for_publication": false,
+  "supported_skill_evidence": [
+    "Python/Pandas data cleaning",
+    "Datetime and admission/discharge event engineering",
+    "Grouped aggregation and relational joins",
+    "Temporal feature engineering",
+    "scikit-learn Pipeline and ColumnTransformer",
+    "StandardScaler",
+    "Logistic regression",
+    "Gradient boosting",
+    "RBF SVM",
+    "Imbalance weighting",
+    "Classification metrics and ROC-AUC",
+    "Threshold/workload tradeoff analysis",
+    "Matplotlib visualization",
+    "Static source review and reproducibility assessment"
+  ]
+}

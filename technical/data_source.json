@@ -1,0 +1,14 @@
+{
+  "verified_date": "2026-11-08",
+  "creator": "Prasad Patil",
+  "dataset_url": "https://www.kaggle.com/datasets/prasad22/healthcare-dataset",
+  "provider_metadata_url": "https://www.kaggle.com/api/v1/datasets/view/prasad22/healthcare-dataset",
+  "title": "Healthcare Dataset",
+  "license": "CC0: Public Domain",
+  "provider_version": 2,
+  "provider_last_updated": "2024-05-08T12:15:16.477Z",
+  "synthetic": true,
+  "generator_stated_by_provider": "Faker",
+  "raw_dataset_rehosted": false,
+  "record_level_previews_published": false
+}

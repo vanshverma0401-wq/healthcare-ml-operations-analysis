@@ -1,0 +1,155 @@
+{
+  "export_date": "2026-11-08",
+  "source_context": "User-provided authenticated final-project archive",
+  "notebooks": [
+    {
+      "workstream": "v4",
+      "original_basename": "final.ipynb",
+      "original_sha256": "b6791b825980410a9f85fbd01a1f7ffa7bac571e5f72ebaf1ea3dc23466683ee",
+      "public_path": "notebooks/billing_v4_final.ipynb",
+      "public_sha256": "f0afc5702258cedb76254a0e1bd33e5c76f980300ec72dc306821cbab83ddaac",
+      "source_cell_count": 6,
+      "public_cell_count": 6,
+      "source_code_cells": 3,
+      "png_count": 12,
+      "original_outputs_count": 53,
+      "public_outputs_count": 53,
+      "personal_metadata_removed": true,
+      "public_cell_ids_generated": true,
+      "execution_counts_cleared": true,
+      "notebook_execution_performed": false
+    },
+    {
+      "workstream": "v5",
+      "original_basename": "V5.ipynb",
+      "original_sha256": "770d3a69f5f4d9bcb9648f4f534b596716ce040713b81ce996ed528d768910b3",
+      "public_path": "notebooks/billing_v5_extension.ipynb",
+      "public_sha256": "157d1f981bd5e3eaef50aa48ca3b4597e322120492b2e93f5977611cee84962b",
+      "source_cell_count": 12,
+      "public_cell_count": 12,
+      "source_code_cells": 12,
+      "png_count": 4,
+      "original_outputs_count": 9,
+      "public_outputs_count": 9,
+      "personal_metadata_removed": true,
+      "public_cell_ids_generated": true,
+      "execution_counts_cleared": true,
+      "notebook_execution_performed": false
+    }
+  ],
+  "python_sources": [
+    {
+      "original_basename": "Predict_High_Cases.py",
+      "original_sha256": "91a2f2433bc38c96a45d1d3a58529a5d5fb9f85a60fede7bc345c0ef8336cbb5",
+      "public_path": "src/billing/predict_high_cost_cases.py",
+      "public_sha256": "91a2f2433bc38c96a45d1d3a58529a5d5fb9f85a60fede7bc345c0ef8336cbb5",
+      "source_lines": 976,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_ML_LinRegClassLasso.py",
+      "original_sha256": "979a975974a38a254620f23b4f29edad829016c9f619d11ef1401b114c244116",
+      "public_path": "src/billing/final_ml_linregclasslasso.py",
+      "public_sha256": "979a975974a38a254620f23b4f29edad829016c9f619d11ef1401b114c244116",
+      "source_lines": 221,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_ML_LogRegMultClass.py",
+      "original_sha256": "ce9e991811bd586603fb17ce021e9bf5c1473ee1f20f22ad16e5805de64dbb4f",
+      "public_path": "src/billing/final_ml_logregmultclass.py",
+      "public_sha256": "ce9e991811bd586603fb17ce021e9bf5c1473ee1f20f22ad16e5805de64dbb4f",
+      "source_lines": 208,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_ML_Test vs Train Split.py",
+      "original_sha256": "8ace270e52c5ee938eb8b1945452f1960c69cf94d09356634cdb7d85e83e8bd4",
+      "public_path": "src/billing/final_ml_test_vs_train_split.py",
+      "public_sha256": "8ace270e52c5ee938eb8b1945452f1960c69cf94d09356634cdb7d85e83e8bd4",
+      "source_lines": 85,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_Project_ML_LinReg.py",
+      "original_sha256": "4b9482d27031afc1562d5aed105c6905b800ea19bf142aef0191fe2f1ad0b554",
+      "public_path": "src/billing/final_project_ml_linreg.py",
+      "public_sha256": "4b9482d27031afc1562d5aed105c6905b800ea19bf142aef0191fe2f1ad0b554",
+      "source_lines": 169,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_proj_ML_GBM.py",
+      "original_sha256": "21de671248af37aef03d93c0f343a843db9bc75d2f96247130a2daab86ad9dfc",
+      "public_path": "src/billing/final_proj_ml_gbm.py",
+      "public_sha256": "21de671248af37aef03d93c0f343a843db9bc75d2f96247130a2daab86ad9dfc",
+      "source_lines": 227,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Final_proj_ML_LinRegCLass.py",
+      "original_sha256": "1ecabfbd35628f5aca4995d74750b23025d7ec76865822a141ee3da39c07ca3d",
+      "public_path": "src/billing/final_proj_ml_linregclass.py",
+      "public_sha256": "1ecabfbd35628f5aca4995d74750b23025d7ec76865822a141ee3da39c07ca3d",
+      "source_lines": 224,
+      "private_csv_literals_replaced": 0,
+      "changed_source_lines": [],
+      "transformation": "Original text retained; UTF-8 encoding normalized only.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Healthcare Operations Risk Management_Baseline Model.py",
+      "original_sha256": "69d5f4129d8a68c9691ade9cd672dda4bef694766be26db823ff6e068c8e014f",
+      "public_path": "src/operations/baseline.py",
+      "public_sha256": "180f54972a0e12b94e667b85ea74fa09b2d668368cbd0935fa43dad44eb693f5",
+      "source_lines": 460,
+      "private_csv_literals_replaced": 1,
+      "changed_source_lines": [
+        28
+      ],
+      "transformation": "Private absolute input CSV path normalized to a relative path.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    },
+    {
+      "original_basename": "Healthcare Operations Risk Management_Refined Model.py",
+      "original_sha256": "b049bf604d574cba150bfebfaeba51f3c256918e2ec603abb0ae5b2e80c61588",
+      "public_path": "src/operations/refined.py",
+      "public_sha256": "9d6a64d6b157db8ac6c5a303cdd39e8eb11b525ac1562eb835f6ac17184d31df",
+      "source_lines": 1472,
+      "private_csv_literals_replaced": 1,
+      "changed_source_lines": [
+        136
+      ],
+      "transformation": "Private absolute input CSV path normalized to a relative path.",
+      "original_code_executed": false,
+      "syntax_parse_passed": true
+    }
+  ],
+  "original_code_executed": false
+}

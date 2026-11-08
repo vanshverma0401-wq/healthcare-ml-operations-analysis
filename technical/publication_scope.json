@@ -1,0 +1,33 @@
+{
+  "review_date": "2026-11-08",
+  "project_year": 2026,
+  "source_archive_sha256": "d0feb94224f1fbd709483971ee0a2e7f4ebf72c0d82dd871a68047effc8efcb1",
+  "source_context": "Authenticated user-supplied final project archive",
+  "public_workstreams": [
+    "V4 billing final analysis",
+    "V5 billing extension",
+    "High-cost and historical billing baseline source",
+    "Baseline and refined occupancy operations source"
+  ],
+  "canonical_final_notebooks": 2,
+  "original_team_python_sources": 9,
+  "original_billing_saved_figures": 16,
+  "original_operations_saved_figures": 10,
+  "model_execution_performed": false,
+  "excluded_materials": [
+    "raw record-level data and record previews",
+    "private machine/account/cloud metadata and URLs",
+    "documents carrying confidentiality markings",
+    "course proposal, feedback and private team archive packages",
+    "duplicate and earlier exploratory notebook variants outside the two canonical final notebooks"
+  ],
+  "team": [
+    "Hinsoukpo Dagan",
+    "Drew Fleming",
+    "Kathleen Hinderscheid",
+    "Benjamin Philbin",
+    "Dymend Teklab",
+    "Vansh Verma"
+  ],
+  "name_spelling_source": "Final billing presentation"
+}
