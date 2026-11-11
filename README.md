@@ -27,6 +27,14 @@ original team Python source files, and 26 original saved aggregate figures
 across billing and operations. Publication changes are recorded in the source
 manifest; original model code was not executed for this portfolio export.
 
+## New evaluation extension
+
+The [post-submission billing benchmark](REPLAY_EXTENSION.md) adds a runnable,
+tested workflow with train-only preprocessing, group-disjoint splits and a
+class-prior baseline. A bounded run on 10,000 retained synthetic records found
+**weak signal** (test ROC-AUC 0.485). It documents the limits rather than claiming
+clinical utility. Original team artifacts below are preserved.
+
 ## Project scope
 
 | Workstream | What the team investigated | Source evidence |
@@ -85,8 +93,10 @@ The original saved results can be inspected without training any model:
 `requirements.txt` lists libraries used by the retained source. It is a dependency
 inventory rather than a verified environment lock. The public notebooks preserve
 their original code and safe saved outputs, with documented privacy and path
-changes; no model was retrained for this publication. Known replay limitations
-are listed in the methods notes.
+changes. The original notebook models were not retrained for the November 8
+publication. A separate November 10 benchmark now has a tested environment and
+aggregate results; see [the extension](REPLAY_EXTENSION.md). Known original replay
+limitations remain listed in the methods notes.
 
 ## Data, attribution and boundaries
 

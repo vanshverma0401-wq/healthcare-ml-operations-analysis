@@ -126,9 +126,11 @@ evidence without converting its actionability labels into validated claims.
 
 ## Reproduction and publication scope
 
-The notebooks, scripts and charts are historical source and saved results, not a
-fresh model execution. No retraining, environment installation or live-data
-integration was performed to create this public package. The source environment
+The original notebooks, scripts and charts are historical source and saved
+results. No original-model retraining or live-data integration was performed for
+the November 8 publication. The [November 10 billing extension](REPLAY_EXTENSION.md)
+is a separately implemented, bounded benchmark with its own tested environment;
+it does not establish clean-kernel execution of the original models. The source environment
 and the project-added hospital-system input must be reconstructed deliberately
 before attempting a new run; source inspection does not prove runtime success.
 

@@ -1,0 +1,119 @@
+{
+  "analysis_date_local": "2026-11-10",
+  "scope": "Post-submission bounded retrospective synthetic-data benchmark; not an original V4/V5 replay or clinical validation",
+  "input_rows": 54966,
+  "duplicate_rows_removed": 0,
+  "sample_rows": 10000,
+  "max_rows": 10000,
+  "sample_policy": "Whole normalized-name groups ordered by SHA-256, independent of outcome",
+  "split_policy": "70/15/15 approximate row fractions, disjoint normalized-name proxy groups; seeds 42/43",
+  "partition_rows": {
+    "train": 6972,
+    "validation": 1507,
+    "test": 1521
+  },
+  "group_overlap": 0,
+  "features": [
+    "age",
+    "gender",
+    "blood_type",
+    "medical_condition",
+    "admission_type",
+    "insurance_provider"
+  ],
+  "target": "billing_amount >= training-only 85th percentile",
+  "training_cutoff": 43116.54194332813,
+  "model_selection": "Prespecified baseline and logistic settings; no validation/test tuning; fixed probability threshold 0.5",
+  "models": {
+    "prior_baseline": {
+      "validation": {
+        "positive_rows": 214,
+        "rows": 1507,
+        "threshold": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positive_f1": 0.0,
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "average_precision": 0.1420039814200398,
+        "confusion_matrix_tn_fp_fn_tp": [
+          1293,
+          0,
+          214,
+          0
+        ]
+      },
+      "test": {
+        "positive_rows": 199,
+        "rows": 1521,
+        "threshold": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positive_f1": 0.0,
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "average_precision": 0.13083497698882315,
+        "confusion_matrix_tn_fp_fn_tp": [
+          1322,
+          0,
+          199,
+          0
+        ]
+      }
+    },
+    "fixed_logistic": {
+      "validation": {
+        "positive_rows": 214,
+        "rows": 1507,
+        "threshold": 0.5,
+        "precision": 0.13835616438356163,
+        "recall": 0.4719626168224299,
+        "positive_f1": 0.21398305084745764,
+        "balanced_accuracy": 0.4927485164545251,
+        "roc_auc": 0.5025099204198018,
+        "average_precision": 0.15311614934217788,
+        "confusion_matrix_tn_fp_fn_tp": [
+          664,
+          629,
+          113,
+          101
+        ]
+      },
+      "test": {
+        "positive_rows": 199,
+        "rows": 1521,
+        "threshold": 0.5,
+        "precision": 0.13368983957219252,
+        "recall": 0.5025125628140703,
+        "positive_f1": 0.21119324181626187,
+        "balanced_accuracy": 0.5061730741453105,
+        "roc_auc": 0.48511848197112645,
+        "average_precision": 0.13415120863565816,
+        "confusion_matrix_tn_fp_fn_tp": [
+          674,
+          648,
+          99,
+          100
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Normalized names are only a conservative split proxy, not stable verified patient IDs.",
+    "Synthetic retrospective data; feature availability at admission is assumed, not verified by field timestamps.",
+    "Historical records were previously studied; this is not a new external blinded test.",
+    "No claim of treatment utility, clinical validity, HIPAA compliance or deployed performance."
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.8.0",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.28.0"
+  },
+  "input_sha256": "a91168b628cab7ae07156fa8e1c86bc0dd4e23877ee51ba16eb41f608176ad25"
+}
